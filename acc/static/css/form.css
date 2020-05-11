@@ -4,3 +4,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+body h1 {
+    text-align: left;
+}
+
+#imgs {
+    display: inline-block;
+}
