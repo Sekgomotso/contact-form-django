@@ -6,11 +6,10 @@ from django.conf import settings
 def home_page(request):
 
     if request.method == 'POST':
-        name = request.POST['first_name']
-        # message = request.POST['about']
+        message = request.POST['about']
 
         send_mail('Registration form', 
-         name,
+         message,
          settings.EMAIL_HOST_USER, 
          ['wifow52238@inbov03.com'], 
          fail_silently=False )
