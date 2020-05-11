@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
     <title>Registration form</title>
 </head>
 <body>
@@ -10,13 +11,13 @@
     <form id="contact" method="post" action="{% url 'home_page' %}">
         {% csrf_token %}
        
-        First name: <input type="text" name="message" placeholder="Enter your first name"> <br><br>
-        Last name: <input type="text" name="message" placeholder="Enter your last name"> <br><br>
-        High-value career choice: UI design <input name="message" type="checkbox"> <br><br>
-        Strategy <input name="message" type="checkbox"> <br><br>
-        Data Science <input name="message" type="checkbox"> <br><br>
-        Web Development <input name="message" type="checkbox"> <br><br>
-        Bio: <textarea name="message" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
+        First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
+        Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
+        High-value career choice: UI design <input name="career" type="checkbox"> <br><br>
+        Strategy <input name="career" type="checkbox"> <br><br>
+        Data Science <input name="career" type="checkbox"> <br><br>
+        Web Development <input name="career" type="checkbox"> <br><br>
+        Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
         <input type="submit" />
 
     </form>
