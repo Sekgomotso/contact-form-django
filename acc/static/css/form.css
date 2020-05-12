@@ -1,9 +1,6 @@
 body {
     background-color: burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 100px;
-    width: 50px;
 }
-
-/* .project {
-
-} */
