@@ -5,32 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Registration form</title>
 </head>
 <body>
 
-    <div class="logo">
-        <h1>Start your high-value career</h1>
-        <img src="static/img/umuzi.png" alt="umuzi-logo">
-        <p>Do you want to turn your talent to a career? You can do that with Umuzi with just a matric qualification. Fill out the form to register.</p>
+    <div class="row text-black content-center align-items-center rgba-black-strong" style="background-image: url(static/img/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" >
+
+        <div class="col-md-6">
+            <h1>Start your high-value career</h1>
+            <img src="static/img/umuzi.png" alt="umuzi-logo" >
+            <p>Do you want to turn your talent to a career? You can do that with Umuzi with just a matric qualification. Fill in the form to register.</p>
+        </div>
+    
+        <div class="col-md-6">
+            <form class="custom-control" id="contact" method="post" action="{% url 'home_page' %}">
+                {% csrf_token %}
+                
+                First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
+                Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
+                High-value career choice: <br><br>
+                <input class="" name="career" type="radio"> UI design <br><br>
+                <input name="career" type="radio"> Strategy <br><br>
+                <input name="career" type="radio"> Data Science <br><br>
+                <input name="career" type="radio"> Web Development <br><br>
+                Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
+                <input class="btn btn-primary" type="submit" />
+        
+            </form>
+        </div>
+
     </div>
 
-    <div class="info">
-        <form id="contact" method="post" action="{% url 'home_page' %}">
-            {% csrf_token %}
-            
-            First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
-            Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
-            High-value career choice: <br><br>
-            <input name="career" type="radio"> UI design <br><br>
-            <input name="career" type="radio"> Strategy <br><br>
-            <input name="career" type="radio"> Data Science <br><br>
-            <input name="career" type="radio"> Web Development <br><br>
-            Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
-            <input type="submit" />
-    
-        </form>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
 </body>
 </html>

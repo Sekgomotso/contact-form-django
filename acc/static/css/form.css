@@ -1,6 +1,7 @@
 body {
     background-color: burlywood;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100px;
+    background-image: url('static/img/umuzi.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
 }
