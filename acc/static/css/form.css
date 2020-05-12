@@ -1,14 +1,9 @@
 body {
     background-color: burlywood;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100px;
+    width: 50px;
 }
 
-body h1 {
-    text-align: left;
-}
+/* .project {
 
-#imgs {
-    display: inline-block;
-}
+} */

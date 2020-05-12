@@ -9,24 +9,27 @@
 </head>
 <body>
 
-    <div id="imgs">
+    <div class="logo">
         <h1>Start your high-value career</h1>
         <img src="static/img/umuzi.png" alt="umuzi-logo">
     </div>
 
-    <form id="contact" method="post" action="{% url 'home_page' %}">
-        {% csrf_token %}
-       
-        First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
-        Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
-        High-value career choice: UI design <input name="career" type="checkbox"> <br><br>
-        Strategy <input name="career" type="checkbox"> <br><br>
-        Data Science <input name="career" type="checkbox"> <br><br>
-        Web Development <input name="career" type="checkbox"> <br><br>
-        Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
-        <input type="submit" />
-
-    </form>
+    <div class="info">
+        <form id="contact" method="post" action="{% url 'home_page' %}">
+            {% csrf_token %}
+            
+            First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
+            Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
+            High-value career choice: <br><br>
+            <input name="career" type="radio"> UI design <br><br>
+            <input name="career" type="radio"> Strategy <br><br>
+            <input name="career" type="radio"> Data Science <br><br>
+            <input name="career" type="radio"> Web Development <br><br>
+            Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
+            <input type="submit" />
+    
+        </form>
+    </div>
     
 </body>
 </html>
