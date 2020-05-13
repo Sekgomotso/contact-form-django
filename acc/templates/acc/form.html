@@ -10,15 +10,15 @@
 </head>
 <body>
 
-    <div class="row text-black content-center align-items-center rgba-black-strong" style="background-image: url(static/img/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" >
+    <div class="row text-black content-center align-items-center" style="background-image: url(static/img/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" >
 
-        <div class="col-md-6">
+        <div class="mask rgba-black-strong col-md-6">
             <h1>Start your high-value career</h1>
-            <img src="static/img/umuzi.png" alt="umuzi-logo" >
+            <img src="static/img/umuzi.png" alt="umuzi-logo" ><br><br>
             <p>Do you want to turn your talent to a career? You can do that with Umuzi with just a matric qualification. Fill in the form to register.</p>
         </div>
     
-        <div class="col-md-6">
+        <div class="mask rgba-black-strong col-md-6">
             <form class="custom-control" id="contact" method="post" action="{% url 'home_page' %}">
                 {% csrf_token %}
                 
