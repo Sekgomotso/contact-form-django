@@ -13,26 +13,58 @@
     <div class="row text-black content-center align-items-center" style="background-image: url(static/img/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" >
 
         <div class="mask rgba-black-strong col-md-6">
-            <h1>Start your high-value career</h1>
-            <img src="static/img/umuzi.png" alt="umuzi-logo" ><br><br>
+            <h1 class="card-header text-white text-center py-4">
+                <strong>Start your high-value career</strong>
+            </h1>
+
+            <div class="img-center py-4">
+                <img src="static/img/umuzi.png" alt="umuzi-logo" ><br><br>
+            </div>
+            
             <p>Do you want to turn your talent to a career? You can do that with Umuzi with just a matric qualification. Fill in the form to register.</p>
         </div>
     
-        <div class="mask rgba-black-strong col-md-6">
+        <div class="text-center mask rgba-black-strong col-md-6">
+
+            <h5 class="card-header text-black text-center py-4">
+                <strong>Register here</strong>
+            </h5>
+
             <form class="custom-control" id="contact" method="post" action="{% url 'home_page' %}">
                 {% csrf_token %}
                 
-                First name: <input type="text" name="first_name" placeholder="Enter your first name"> <br><br>
-                Last name: <input type="text" name="last_name" placeholder="Enter your last name"> <br><br>
-                High-value career choice: <br><br>
-                <input class="" name="career" type="radio"> UI design <br><br>
-                <input name="career" type="radio"> Strategy <br><br>
-                <input name="career" type="radio"> Data Science <br><br>
-                <input name="career" type="radio"> Web Development <br><br>
-                Bio: <textarea name="about" id="bio" cols="30" rows="10" placeholder="a little about yourself..."></textarea><br><br>
-                <input class="btn btn-primary" type="submit" />
-        
+                <!-- First name -->
+                <div class="md-form mt-3">
+                    <input type="text" id="materialContactFormName" class="form-control" placeholder="Enter first name"><br>
+                </div>
+
+                <!-- Last name -->
+                <div class="md-form mt-3">
+                    <input type="text" id="materialContactFormName" class="form-control" placeholder="Enter last name"><br><br>
+                </div> <br>
+
+
+                <!-- Subject -->
+                <select class="browser-default custom-select mb-4">
+                    <option value="" disabled>Choose option</option>
+                    <option value="1" selected>High-value career choice</option>
+                    <option value="2">UI design</option>
+                    <option value="3">Strategy</option>
+                    <option value="4">Data Science</option>
+                    <option value="5">Web Development</option>
+                </select>
+
+                <!--Bio-->
+                <div class="md-form">
+                    <textarea id="materialContactFormMessage" class="form-control md-textarea" placeholder="a little about yourself..." rows="3"></textarea>
+                </div><br>
+
+                <!-- Submit button -->
+                <input class="btn btn-primary btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" />
+                <br><br>
+                
             </form>
+
         </div>
 
     </div>
