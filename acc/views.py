@@ -6,7 +6,7 @@ from django.conf import settings
 def home_page(request):
 
     if request.method == 'POST':
-        message = request.POST['about']
+        message = "{{ form.fname }}" + request.POST['about']
 
         send_mail('Registration form', 
          message,
