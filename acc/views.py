@@ -17,5 +17,6 @@ def home_page(request):
          'First name: ' + name + '\n' + 'Last name: ' + surname + '\n' + 'Choice: ' + career + '\n' + 'About user: ' + bio,
          settings.EMAIL_HOST_USER, 
          ['jifica2667@chordmi.com'], 
-         fail_silently=False )
+         fail_silently=False)
+
     return render(request, 'acc/form.html')
