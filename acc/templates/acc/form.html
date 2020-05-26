@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title> Registration form </title>
 </head>
+
 <body class="mask rgba-black-strong">
 
     <div class="row text-black content-center align-items-center" style="background-image: url(static/img/background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;" >
@@ -34,6 +35,15 @@
                 <strong>Register here</strong>
             </h5>
 
+            <!-- success message -->
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
             <form class="custom-control" id="contact" method="post" action="{% url 'home_page' %}">
                 {% csrf_token %}
                 
@@ -44,9 +54,13 @@
 
                 <!-- Last name -->
                 <div class="md-form mt-3">
-                    <input type="text" id="materialContactFormName" class="form-control" name="lname" placeholder="Enter last name" required><br><br>
-                </div> <br>
+                    <input type="text" id="materialContactFormName" class="form-control" name="lname" placeholder="Enter last name" required><br>
+                </div>
 
+                <!-- Email address -->
+                <div class="md-form mt-3">
+                    <input type="text" id="materialContactFormName" class="form-control" name="email" placeholder="Enter your email address" required><br><br>
+                </div>
 
                 <!-- Subject -->
                 <select class="browser-default custom-select mb-4" name="career" required>
@@ -66,7 +80,7 @@
 
                 <!-- Submit button -->
                 <input class="btn btn-primary btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" />
-                <br><br>
+                <br>
                 
             </form>
 
@@ -79,4 +93,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
 </body>
+
 </html>
