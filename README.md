@@ -1,7 +1,8 @@
 # contact-form-django
 
 ### Instructions:
-#### Create a virtual environment 1. For virtualwrapper: 
+#### Create a virtual environment 
+1. For virtualwrapper: 
 ```
 mkvirtualenv django
 ```
